@@ -1,0 +1,17 @@
+This project is an implementation of a Zend_Db_Adapter_Abstract
+for the ext/mysql. It passes all unittests of the Zend_Db testsuite
+for an adapter and should therefore be very robust.
+
+The purpose for implementing an adapter for the deprecated ext/mysql
+is the legacy application reason. A considerable share of people probably has
+legacy applications that use mysql_* functions. You can inject this Zend
+adapter into these applications wihtout having to use multiple db connections.
+
+Usage:
+
+$db = new Whitewashing_Db_Adapter_Mysql($options);
+
+To set or get the mysql Resource:
+
+$mysql_conn = $db->getConnection();
+$db->setConnectionResource($mysql_conn);
