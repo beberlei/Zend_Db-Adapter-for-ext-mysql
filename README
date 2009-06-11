@@ -7,6 +7,8 @@ is the legacy application reason. A considerable share of people probably has
 legacy applications that use mysql_* functions. You can inject this Zend
 adapter into these applications wihtout having to use multiple db connections.
 
+This adapter emulates prepared statements with positional characters ?.
+
 Usage:
 
 $db = new Whitewashing_Db_Adapter_Mysql($options);
